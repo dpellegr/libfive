@@ -9317,7 +9317,7 @@ namespace Catch {
                 multi->addListener(listener->create(Catch::ReporterConfig(config)));
             }
             multi->addReporter(createReporter(config->getReporterName(), config));
-            return std::move(multi);
+            return multi;
         }
 
         Catch::Totals runTests(std::shared_ptr<Config> const& config) {
